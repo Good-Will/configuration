@@ -16,8 +16,9 @@ type Config struct {
 
 // Server - A server represents a concept like an HTTP virtual server having its own port and containing zero to multiple routing rules.
 type Server struct {
-	Port    string   `yaml:"port"`
-	Routers []Router `yaml:"routers"`
+	Port    string                       `yaml:"port"`
+	Configs map[string]map[string]string `yaml:"configs"`
+	Routers []Router                     `yaml:"routers"`
 }
 
 // Router - A router contains a prefix-defined routing rule, and underlying middlewares and handlers.
