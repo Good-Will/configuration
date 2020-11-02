@@ -11,7 +11,8 @@ import (
 
 // Config - A config represents the root node of the structures.
 type Config struct {
-	Server Server `yaml:"server"`
+	Server  Server   `yaml:"server"`
+	Servers []Server `yaml:"servers"`
 }
 
 // Server - A server represents a concept like an HTTP virtual server having its own port and containing zero to multiple routing rules.
